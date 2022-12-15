@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: test-ds
+spec:
+  minReadySeconds:
+  selector:
+    matchLabels:
+      app: alpine
+  template:
+    metadata:
+      name: alpine-ds
+      labels:
+        app: alpine
+    spec:
+      containers:
+        - name: alpine-agent
+          image: alpine:3
+          command:
+            - sleep
+            - 1d
+
