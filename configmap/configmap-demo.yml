@@ -11,6 +11,7 @@ spec:
       volumeMounts:
         - mountPath: /tmp
           name: configmap-demo
-  volumes: 
-    configMap: 
-      name: configmap-demo
+  volumes:
+    - name: configmap-vol
+      configMap: 
+        name: configmap-demo
