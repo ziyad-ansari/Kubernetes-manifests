@@ -10,7 +10,7 @@ spec:
         - containerPort: 80
       volumeMounts:
         - mountPath: /configmap/log.conf
-          name: configmap-demo
+          name: configmap-vol
   volumes:
     - name: configmap-vol
       configMap: 
