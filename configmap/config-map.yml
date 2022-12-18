@@ -3,5 +3,8 @@ kind: ConfigMap
 metadata:
   name: configmap-demo
 data:
-  username: root
-  password: "12345"
+  data.conf:
+    log_dest stdout
+    log_type all
+    log_timestamp true
+    listener 9001
