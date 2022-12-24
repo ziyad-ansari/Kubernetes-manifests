@@ -4,8 +4,8 @@ metadata:
   name: pv-claim
 spec:
   accessModes:
-    
-  storageClassName:
+    - ReadWriteOnce
+  storageClassName: gp2
   resources:
     request: 1Gi
 

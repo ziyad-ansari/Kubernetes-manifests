@@ -18,10 +18,10 @@ spec:
       ports:
         - containerPort: 3306 
       VolumeMount:
-        name: azure-pv
+        name: mysql-vol
         mountPath: /var/lib/mysql
   volumes:
     - name: mysql-vol
       persistentVolumeClaim:
-        claimName:
+        claimName: pv-claim
 
