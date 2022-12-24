@@ -17,7 +17,7 @@ spec:
           value: nonroot
       ports:
         - containerPort: 3306 
-      VolumeMount:
+      VolumeMounts:
         name: mysql-vol
         mountPath: /var/lib/mysql
   volumes:
