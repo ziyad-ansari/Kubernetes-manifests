@@ -18,8 +18,8 @@ spec:
       ports:
         - containerPort: 3306 
       VolumeMounts:
-        name: mysql-vol
-        mountPath: /var/lib/mysql
+        - name: mysql-vol
+          mountPath: /var/lib/mysql
   volumes:
     - name: mysql-vol
       emptyDir:       # emptyDir represents a temporary directory that shares a pod's lifetime.
