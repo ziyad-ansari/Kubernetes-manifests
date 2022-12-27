@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-pod
+spec:
+  containers:
+    - image: nginx:1.23
+      name: nginx-container
+      ports:
+        - containerPort: 80
+  tolerations:
+    - effect: NoSchedule    # Effect indicates the taint effect to match.  
+      key: ssd              # Key is the taint key that the toleration applies to.         
+      operator: Equal       # Operator represents a key's relationship to the value. Valid operators are Exists and Equal. Defaults to Equal. Exists is equivalent to wildcard for value, so that a pod can tolerate all taints of a particular category.
+      value: "true"         # Value is the taint value the toleration matches to.
